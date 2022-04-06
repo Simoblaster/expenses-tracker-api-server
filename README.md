@@ -6,7 +6,7 @@ Open-source version of my favourite expenses tracker application.
 - **Back-End:** Express.js
 - **Front-End:** React.js
 
-# Congig API Server
+# Config API Server
 Insert in **config.json** your DB info.
 
 # Run API Server
