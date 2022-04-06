@@ -12,7 +12,7 @@ Insert in **config.json** your DB info.
 # Run API Server
 For start nodemon development server run command **npm run start:dev**
 
-Application will be server on http://localhost:4000
+Application will be served on http://localhost:4000
 
 # Register a test user
 With Postman execute a POST request at http://localhost:4000/accounts/register with this body:
