@@ -9,6 +9,9 @@ Open-source version of my favourite expenses tracker application.
 # Config API Server
 Insert in **config.json** your DB info.
 
+You will need to configure and smtp server for the email verification.
+For testing you can create a free account in one click at https://ethereal.email/ and copy the options below the title Nodemailer configuration.
+
 # Run API Server
 For start nodemon development server run command **npm run start:dev**
 
