@@ -11,8 +11,8 @@ module.exports = {
 };
 
 function basicDetails(transaction) {
-    const { id, type, created, value, userId, categoryId, createdAt, updatedAt } = transaction;
-    return { id, type, created, value, userId, categoryId, createdAt, updatedAt };
+    const { id, type, date, value, userId, categoryId, createdAt, updatedAt } = transaction;
+    return { id, type, date, value, userId, categoryId, createdAt, updatedAt };
 }
 
 async function create(params) {

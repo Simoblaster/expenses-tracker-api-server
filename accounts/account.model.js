@@ -4,6 +4,7 @@ module.exports = model;
 
 function model(sequelize) {
     const attributes = {
+        currency: { type: DataTypes.STRING, allowNull: false },
         email: { type: DataTypes.STRING, allowNull: false },
         passwordHash: { type: DataTypes.STRING, allowNull: false },
         title: { type: DataTypes.STRING, allowNull: false },
