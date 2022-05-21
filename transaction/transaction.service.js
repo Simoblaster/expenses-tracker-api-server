@@ -20,14 +20,12 @@ async function create(params) {
     await transaction.save() 
 }
 
-async function update(id, params) {
-
-    const transaction = await getById(id);
-
+async function update(params) {
+    const transaction = await getById(params.id);
     Object.assign(transaction, params);
     transaction.updatedAt = Date.now();
     await transaction.save();
-
+    
     return basicDetails(transaction);
 }
 

@@ -6,7 +6,7 @@ const Role = require('_helpers/role');
 
 // routes
 router.post('/create', authorize(), create);
-router.put('/update/:id', authorize(), update);
+router.put('/update', authorize(), update);
 router.get('/getAll', authorize(), getAll);
 router.get('/getById/:id', authorize(), getById);
 router.get('/getByUserId/:id', authorize(), getByUserId);
@@ -25,12 +25,13 @@ function create(req, res, next) {
 }
 
 function update(req, res, next) {
-    if (Number(req.params.userId) !== req.user.id) {
+    if (Number(req.body.userId) !== req.user.id) {
         return res.status(401).json({ message: 'Unauthorized' });
     }
-    transactionService.update(req.params.id, req.body)
+    transactionService.update(req.body)
         .then(transaction => res.json(transaction))
         .catch(next);
+
 }
 
 function getAll(req, res, next) {
